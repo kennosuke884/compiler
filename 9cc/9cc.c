@@ -6,7 +6,7 @@
 
 // int argc, char **argv はコマンドライン引数
 // コマンドライン引数とは、コンピュータのコマンド入力画面（コマンドライン）からプログラムを起動する際に指定する文字列
-// argc:引数の個数　argv:引数の配列　**argv:引数配列のポインタ
+// argc:引数の個数　argv:引数の配列　**argv:引数配列へのポインタ
 int main(int argc, char **argv){
     if(argc != 2){
         fprintf(stderr, "引数の個数が正しくありません\n");
@@ -15,7 +15,7 @@ int main(int argc, char **argv){
     printf(".intel_syntax noprefix\n");
     printf(".globl main\n");
     printf("main:\n");
-    printf("  mov rax, %d\n", atoi(argv[1]));
+    printf("  mov rax, %d\n", atoi(argv[1]));  //atoi():整数値のstr型データをint型に変換する関数
     printf("  ret\n");
     return 0;
 }
