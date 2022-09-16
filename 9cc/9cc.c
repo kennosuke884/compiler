@@ -142,6 +142,7 @@ int main(int argc, char **argv){
         }
         expect('-');
         printf("    sub rax, %d\n", expect_number());
+    }
 
 
     printf("    ret\n");
